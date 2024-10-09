@@ -22,7 +22,7 @@ func Files(unsetEnv bool) []*os.File {
 
 // FilesWithNames maps fd names to a set of os.File pointers.
 func FilesWithNames() map[string][]*os.File {
-	files := activation.Files(true)
+	files := Files(true)
 	filesWithNames := map[string][]*os.File{}
 
 	for _, f := range files {
